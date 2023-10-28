@@ -1,12 +1,11 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'com.google.gms.google-services'
 }
-
 android {
     namespace 'com.example.myapplication'
     compileSdk 33
+
 
     defaultConfig {
         applicationId "com.example.myapplication"
@@ -31,9 +30,16 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding true
+    }
+    dataBinding{
+        enable true
+    }
 }
 
 dependencies {
+
 
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
@@ -47,7 +53,62 @@ dependencies {
 
 
 
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2"
+    implementation "androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.2"
 
 
+    implementation "androidx.navigation:navigation-fragment-ktx:2.7.4"
+    implementation "androidx.navigation:navigation-ui-ktx:2.7.4"
+
+//    // Lifecycle
+//    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+//    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.6.2"
+//    implementation "androidx.lifecycle:lifecycle-runtime:2.6.2"
+//    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.2"
+//
+//    // Coroutines
+//    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
+//    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
+//
+//    // Coroutine Lifecycle Scopes
+//    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2"
+//    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.2"
+//
+//    // Navigation Component
+//    implementation "androidx.navigation:navigation-fragment-ktx:2.7.4"
+//    implementation "androidx.navigation:navigation-ui-ktx:2.7.4"
+//
+//    // Glide
+//    implementation 'com.github.bumptech.glide:glide:4.14.2'
+//
+//
+//    // Activity KTX for viewModels()
+//    implementation "androidx.activity:activity-ktx:1.8.0"
+//
+//    //Dagger - Hilt
+//    implementation "com.google.dagger:hilt-android:2.44.2"
+//    implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03"
+//
+//
+//    implementation "com.google.dagger:hilt-android:2.44.2"
+//
+//
+//
+//    // Timber
+//    implementation 'com.jakewharton.timber:timber:4.7.1'
+//
+//    // Firebase Firestore
+//    implementation 'com.google.firebase:firebase-firestore:24.9.0'
+//
+//    // Firebase Storage KTX
+//    implementation 'com.google.firebase:firebase-storage-ktx:20.3.0'
+//
+//    // Firebase Coroutines
+//    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3'
+//
+//    // ExoPlayer
+//    api "com.google.android.exoplayer:exoplayer-core:2.19.1"
+//    api "com.google.android.exoplayer:exoplayer-ui:2.19.1"
+//    api "com.google.android.exoplayer:extension-mediasession:2.19.1"
 
 }
